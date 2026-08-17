@@ -1,0 +1,22 @@
+{
+  "name": "vc-invoice-server",
+  "version": "1.0.0",
+  "description": "Backend API for Village Coders Invoice Generator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "pdf-lib": "latest",
+    "puppeteer": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
