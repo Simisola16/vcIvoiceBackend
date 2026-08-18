@@ -691,24 +691,6 @@ function generateInvoiceHtml(invoice, options = {}) {
               <span class="bank-val">${paymentDetails.accountNumber}</span>
             </div>
           ` : ''}
-          ${paymentDetails.swift ? `
-            <div class="bank-info-row">
-              <span class="bank-label">SWIFT / BIC:</span>
-              <span class="bank-val">${paymentDetails.swift}</span>
-            </div>
-          ` : ''}
-          ${paymentDetails.paypalEmail ? `
-            <div class="bank-info-row">
-              <span class="bank-label">PayPal:</span>
-              <span class="bank-val">${paymentDetails.paypalEmail}</span>
-            </div>
-          ` : ''}
-          ${paymentDetails.cryptoAddress ? `
-            <div class="bank-info-row">
-              <span class="bank-label">Crypto (USDT/ETH):</span>
-              <span class="bank-val" style="font-size: 9px;">${paymentDetails.cryptoAddress}</span>
-            </div>
-          ` : ''}
 
           ${paymentDetails.paymentTerms ? `
             <div class="terms-box">
