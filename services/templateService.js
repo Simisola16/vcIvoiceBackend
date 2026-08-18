@@ -105,11 +105,11 @@ function generateInvoiceHtml(invoice, options = {}) {
     /* Watermark */
     .watermark-bg {
       position: absolute;
-      top: 52%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 490px;
-      opacity: 0.055;
+      width: 560px;
+      opacity: 0.06;
       pointer-events: none;
       z-index: 1;
       display: flex;
@@ -118,7 +118,7 @@ function generateInvoiceHtml(invoice, options = {}) {
       justify-content: center;
     }
     .watermark-bg img {
-      width: 400px;
+      width: 500px;
       height: auto;
       object-fit: contain;
     }
@@ -127,7 +127,7 @@ function generateInvoiceHtml(invoice, options = {}) {
     .header-wrapper {
       position: relative;
       z-index: 10;
-      padding: 24px 40px 14px 40px;
+      padding: 20px 40px 10px 40px;
     }
     .header-content {
       display: flex;
@@ -140,22 +140,22 @@ function generateInvoiceHtml(invoice, options = {}) {
       gap: 16px;
     }
     .brand-logo-img {
-      height: 90px;
-      max-width: 300px;
+      height: 125px;
+      max-width: 380px;
       object-fit: contain;
     }
     .header-divider-vertical {
       width: 2px;
-      height: 65px;
+      height: 88px;
       background-color: #8c725c;
-      margin: 0 10px;
+      margin: 0 12px;
       border-radius: 2px;
     }
     .contact-section {
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      font-size: 10.5px;
+      gap: 5px;
+      font-size: 11px;
       color: #2d3748;
       font-weight: 500;
     }
