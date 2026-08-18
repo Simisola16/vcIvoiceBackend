@@ -108,7 +108,7 @@ function generateInvoiceHtml(invoice, options = {}) {
       top: 52%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 440px;
+      width: 490px;
       opacity: 0.055;
       pointer-events: none;
       z-index: 1;
@@ -118,7 +118,7 @@ function generateInvoiceHtml(invoice, options = {}) {
       justify-content: center;
     }
     .watermark-bg img {
-      width: 360px;
+      width: 400px;
       height: auto;
       object-fit: contain;
     }
@@ -127,7 +127,7 @@ function generateInvoiceHtml(invoice, options = {}) {
     .header-wrapper {
       position: relative;
       z-index: 10;
-      padding: 26px 40px 14px 40px;
+      padding: 24px 40px 14px 40px;
     }
     .header-content {
       display: flex;
@@ -140,13 +140,13 @@ function generateInvoiceHtml(invoice, options = {}) {
       gap: 16px;
     }
     .brand-logo-img {
-      height: 68px;
-      max-width: 260px;
+      height: 90px;
+      max-width: 300px;
       object-fit: contain;
     }
     .header-divider-vertical {
       width: 2px;
-      height: 52px;
+      height: 65px;
       background-color: #8c725c;
       margin: 0 10px;
       border-radius: 2px;
