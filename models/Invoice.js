@@ -99,6 +99,10 @@ const InvoiceSchema = new mongoose.Schema({
     paypalEmail: { type: String, default: 'payments@villagecoders.io' },
     cryptoAddress: { type: String, default: '' },
     paymentTerms: { type: String, default: 'Payment is due within 14 days of invoice issue date.' },
+    paymentNotice: { 
+      type: String, 
+      default: 'Payment must strictly be sent to the official bank account listed on this invoice. Payments sent to any other or unverified account will not be acknowledged or credited, and you will be required to re-send the full payment to the authorized account above.' 
+    },
     notes: { type: String, default: 'Thank you for choosing Village Coders for your software development needs!' }
   },
 

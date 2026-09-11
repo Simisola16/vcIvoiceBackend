@@ -55,6 +55,8 @@ function generateInvoiceHtml(invoice, options = {}) {
   const deposit = pricing?.deposit || 0;
   const total = pricing?.total || 0;
   const balanceDue = pricing?.balanceDue || total;
+  const defaultNotice = 'Payment must strictly be sent to the official bank account listed on this invoice. Payments sent to any other or unverified account will not be acknowledged or credited, and you will be required to re-send the full payment to the authorized account above.';
+  const paymentNotice = paymentDetails?.paymentNotice !== undefined ? paymentDetails.paymentNotice : defaultNotice;
 
   const statusColors = {
     paid: { bg: '#E6F4EA', text: '#137333', border: '#CEEAD6', label: 'PAID' },
@@ -402,6 +404,31 @@ function generateInvoiceHtml(invoice, options = {}) {
       color: #475569;
       line-height: 1.3;
     }
+    .payment-notice-box {
+      margin-top: 8px;
+      padding: 7px 9px;
+      background: #fffbeb;
+      border: 1px solid #fef3c7;
+      border-left: 3px solid #d97706;
+      border-radius: 5px;
+    }
+    .payment-notice-title {
+      font-size: 8.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #b45309;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+    .payment-notice-text {
+      font-size: 9px;
+      color: #78350f;
+      line-height: 1.35;
+      font-weight: 500;
+    }
 
     /* Right Box: Totals */
     .totals-card {
@@ -696,6 +723,17 @@ function generateInvoiceHtml(invoice, options = {}) {
             <div class="terms-box">
               <div class="terms-label">Payment Terms</div>
               <div class="terms-text">${paymentDetails.paymentTerms}</div>
+            </div>
+          ` : ''}
+
+          ${paymentNotice ? `
+            <div class="payment-notice-box">
+              <div class="payment-notice-title">
+                <span style="font-size: 9.5px;">⚠️</span> IMPORTANT PAYMENT NOTICE
+              </div>
+              <div class="payment-notice-text">
+                ${paymentNotice}
+              </div>
             </div>
           ` : ''}
         </div>
