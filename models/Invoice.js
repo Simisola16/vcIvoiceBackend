@@ -91,9 +91,9 @@ const InvoiceSchema = new mongoose.Schema({
 
   // Payment information & Terms
   paymentDetails: {
-    bankName: { type: String, default: 'Standard Chartered / Access Bank' },
-    accountName: { type: String, default: 'Village Coders Tech Ltd' },
-    accountNumber: { type: String, default: '0123456789' },
+    bankName: { type: String, default: 'Opay' },
+    accountName: { type: String, default: 'MUHAYAD OLASUNKANMI OLAMILEKAN' },
+    accountNumber: { type: String, default: '9132245929' },
     swift: { type: String, default: 'SCBLNGLA' },
     routingNumber: { type: String, default: '' },
     paypalEmail: { type: String, default: 'payments@villagecoders.io' },
